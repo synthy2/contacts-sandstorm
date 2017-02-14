@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>It works!</h2>
+		<h2>Contacts</h2>
 		<router-view></router-view>
 	</div>
 </template>
@@ -10,68 +10,79 @@
 	 * libs
 	 */
 	import { mapGetters }					from "vuex";
-
+	
 	export default {
-		name: "app",
+		name: "app"
 	}
+
 </script>
 
 <style>
-	html {
-		margin: 0;
-		padding: 0;
-	}
 
-	body {
-	}
+		*,
+		*::before,
+		*::after {
+		    box-sizing: border-box;
+		}
 
-	h1, h2, h3, h4, h5, h6, p, ul, li {
-		margin: 0;
-		padding: 0;
-	}
+		html {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+		}
 
-	a {
-		color: #886d5d;
-		text-decoration: none;
-	}
+		body {
+			font-family: 'Cuprum', sans-serif;
+			font-size: 24px;
+		}
 
-	a:hover{
-		color: #81553b;
-	}
+		h1, h2, h3, h4, h5, h6, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
 
-	::-webkit-scrollbar {
-	  width: 9px;
-	  height: 9px;
-	}
-	::-webkit-scrollbar-button {
-	  width: 0px;
-	  height: 0px;
-	}
-	::-webkit-scrollbar-thumb {
-	  background: rgb(16, 13, 19);
-	  border: 0px none #ffffff;
-	  border-radius: 50px;
-	}
-	::-webkit-scrollbar-thumb:hover {
-	  background: rgb(16, 13, 20);
-	}
-	::-webkit-scrollbar-thumb:active {
-	  background: rgb(16, 13, 20);
-	}
-	::-webkit-scrollbar-track {
-	  background: rgba(0,0,0,0.25);
-	  border: 0px none #ffffff;
-	  border-radius: 16px;
+		a {
+			color: #886d5d;
+			text-decoration: none;
+		}
 
-	}
-	::-webkit-scrollbar-track:hover {
-	  background: rgba(0,0,0,0.2);
-	}
-	::-webkit-scrollbar-track:active {
-	  background: rgba(0,0,0,0.35);
-	}
-	::-webkit-scrollbar-corner {
-	  background: transparent;
-	}
+		a:hover{
+			color: #81553b;
+		}
+
+		::-webkit-scrollbar {
+		  width: 9px;
+		  height: 9px;
+		}
+		::-webkit-scrollbar-button {
+		  width: 0px;
+		  height: 0px;
+		}
+		::-webkit-scrollbar-thumb {
+		  background: rgb(16, 13, 19);
+		  border: 0px none #ffffff;
+		  border-radius: 50px;
+		}
+		::-webkit-scrollbar-thumb:hover {
+		  background: rgb(16, 13, 20);
+		}
+		::-webkit-scrollbar-thumb:active {
+		  background: rgb(16, 13, 20);
+		}
+		::-webkit-scrollbar-track {
+		  background: rgba(0,0,0,0.25);
+		  border: 0px none #ffffff;
+		  border-radius: 16px;
+
+		}
+		::-webkit-scrollbar-track:hover {
+		  background: rgba(0,0,0,0.2);
+		}
+		::-webkit-scrollbar-track:active {
+		  background: rgba(0,0,0,0.35);
+		}
+		::-webkit-scrollbar-corner {
+		  background: transparent;
+		}
 
 </style>

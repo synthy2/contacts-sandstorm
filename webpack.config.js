@@ -22,18 +22,23 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-	  {
-		test: /\.css$/,
-		loader: "css-loader",
-		exclude: /node_modules/
-	  },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      }
+		  {
+				test: /\.scss$/,
+				loader: "sass-loader",
+				exclude: /node_modules/
+		  },
+		  {
+				test: /\.css$/,
+				loader: "css-loader",
+				exclude: /node_modules/
+		  },
+	    {
+	      test: /\.(png|jpg|gif|svg)$/,
+	      loader: 'file-loader',
+	      options: {
+	        name: '[name].[ext]?[hash]'
+	      }
+	    }
     ]
   },
   resolve: {
