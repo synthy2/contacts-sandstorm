@@ -1,10 +1,10 @@
 <template lang="html">
 
 
-	<form>
-		<input type="text" placeholder="Contact Name" v-model.trim="newContact.name"/>
-    <input type="text" placeholder="Contact Number" v-model.trim="newContact.number"/>
-    <input type="text" placeholder="Contact Summary" v-model.trim="newContact.summary"/>
+	<form class="add-new-form">
+		<input type="text" placeholder="Contact Name" v-model.trim="newContact.name" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
+    <input type="text" placeholder="Contact Number" v-model.trim="newContact.number" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
+    <input type="text" placeholder="Contact Summary" v-model.trim="newContact.summary" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
 		<button name="button" v-on:click.prevent="addContact">
 			<i class="fa fa-plus" aria-hidden="true"></i> Add
 		</button>
@@ -18,7 +18,8 @@
 export default {
     data() {
 			return {
-				newContact: {}
+				newContact: {},
+        showValidationWarning: false
 			};
     },
     components: {
@@ -26,8 +27,17 @@ export default {
     },
 		methods: {
       addContact(){
-        this.$store.dispatch("addContact", this.newContact);
-        this.newContact = {};
+        if (!this.newContact.name || !this.newContact.number || !this.newContact.summary){
+          this.showValidationWarning = true;
+          setTimeout(() => {
+            this.showValidationWarning = false;
+          }, 2000);
+          return;
+        }
+        else {
+          this.$store.dispatch("addContact", this.newContact);
+          this.newContact = {};
+        }
       }
     }
 };
@@ -35,4 +45,7 @@ export default {
 
 <style >
 
+  .validation-warning {
+    border: 1px solid orange !important;
+  }
 </style>
