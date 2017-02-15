@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>Contacts</h2>
+    <toolbar-menu />
 		<router-view></router-view>
 	</div>
 </template>
@@ -11,8 +11,15 @@
 	 */
 	import { mapGetters }					from "vuex";
 
+  import ToolbarMenu            from "./Toolbar/Toolbar.vue"
+
+
+
 	export default {
-		name: "app"
+		name: "app",
+    components: {
+      ToolbarMenu
+    }
 	}
 
 </script>
@@ -23,6 +30,7 @@
 			margin: 0;
 			padding: 0;
 			font-size: 100%;
+      overflow: hidden;
 		}
 
 		body {
