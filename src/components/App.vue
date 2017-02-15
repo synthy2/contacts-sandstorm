@@ -10,7 +10,7 @@
 	 * libs
 	 */
 	import { mapGetters }					from "vuex";
-	
+
 	export default {
 		name: "app"
 	}

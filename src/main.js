@@ -4,7 +4,7 @@ import Vue 									from "vue";
 import { sync }							from "vuex-router-sync";
 
 // css n shiz
-import KeenUI 							from "keen-ui";
+//import KeenUI 							from "keen-ui";
 
 // STORE
 import store 								from "./vuex/store.js";
@@ -14,7 +14,7 @@ import router 							from "./router/router.js";
 
 // Combine
 sync(store, router);
-Vue.use(KeenUI);
+
 
 // CORE
 import App 									from "./components/App.vue";
