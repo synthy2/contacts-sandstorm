@@ -2,7 +2,6 @@
 
 
 	<ul>
-		<li v-show="!contacts.length">nothing here..</li>
 		<li v-for="contact in contacts">
       <header class="contact-header">
         <img src="../../assets/img/thief.png" />
