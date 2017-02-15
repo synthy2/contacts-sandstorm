@@ -1,8 +1,8 @@
 <template lang="html">
   <section class="fixed-toolbar">
     <button type="button" class="button" v-on:click="toggleMenu" v-show="isOnWhichPage == 'home'">
-      <span v-show="!isMenuShown">+</span>
-      <span v-show="isMenuShown">-</span>
+      <span v-show="!isMenuShown"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+      <span v-show="isMenuShown"><i class="fa fa-minus" aria-hidden="true"></i></span>
     </button>
     <router-link to="/contacts" tag="div" v-show="isOnWhichPage != 'home'">
       <button type="button" class="button" v-on:click="toggleMenu" v-show="isOnWhichPage != 'home'">

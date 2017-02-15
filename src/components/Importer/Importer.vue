@@ -28,7 +28,7 @@ export default {
     position: absolute;
     z-index: 3;
   }
-  .import-area:hover {
+  .import-area:hover, .hatched-bg:hover {
     cursor: -webkit-grab;
   }
   .import-area h4 {
