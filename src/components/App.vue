@@ -34,6 +34,8 @@
 		}
 
 		body {
+			margin: 0;
+			padding: 0;
 			font-family: 'Cuprum', sans-serif;
 			font-size: 24px;
 		}
@@ -44,13 +46,19 @@
 		}
 
 		a {
-			color: #886d5d;
 			text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 0.8em;
+      color: white;
 		}
 
-		a:hover{
-			color: #81553b;
-		}
+    .fullpage-widget {
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+      vertical-align: middle;
+    }
+
 
 		::-webkit-scrollbar {
 		  width: 9px;

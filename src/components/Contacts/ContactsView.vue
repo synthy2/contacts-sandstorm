@@ -22,6 +22,9 @@ export default {
     components: {
 			ContactsForm,
 			ContactsList,
+    },
+    mounted(){
+      this.$store.dispatch("isOnWhichPage", "home");
     }
 };
 </script>
