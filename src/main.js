@@ -3,8 +3,6 @@
 import Vue 									from "vue";
 import { sync }							from "vuex-router-sync";
 
-// css n shiz
-//import KeenUI 							from "keen-ui";
 
 // STORE
 import store 								from "./vuex/store.js";
