@@ -21,11 +21,13 @@ export default {
     handleFileUpload(){
       // allows a single file!!!
       let file = this.$refs["importer-file-input"].files[0];
-      console.log(file)
-
+      this.sendFileToDb(file);
     },
     invokeFileUpload(){
       this.$refs["importer-file-input"].click();
+    },
+    sendFileToDb(file){
+
     }
   },
   mounted(){

@@ -8,9 +8,6 @@
         <span>{{ contact.name }}</span>
         <span class="small-number">{{ contact.number }}</span>
       </header>
-      <summary class="summary-description">
-        <span>{{ contact.summary }}</span>
-      </summary>
     </li>
 	</ul>
 

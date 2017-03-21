@@ -4,7 +4,6 @@
 	<form class="add-new-form">
 		<input type="text" placeholder="Contact Name" v-model.trim="newContact.name" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
     <input type="text" placeholder="Contact Number" v-model.trim="newContact.number" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
-    <input type="text" placeholder="Contact Summary" v-model.trim="newContact.summary" v-bind:class="{ 'validation-warning': showValidationWarning }"/>
 		<button name="button" v-on:click.prevent="addContact">
 			<i class="fa fa-plus" aria-hidden="true"></i> Add
 		</button>
@@ -27,7 +26,7 @@ export default {
     },
 		methods: {
       addContact(){
-        if (!this.newContact.name || !this.newContact.number || !this.newContact.summary){
+        if (!this.newContact.name || !this.newContact.number){
           this.showValidationWarning = true;
           setTimeout(() => {
             this.showValidationWarning = false;
